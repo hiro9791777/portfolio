@@ -1,4 +1,4 @@
-import type { IconProps } from "../types/icon";
+import type { IconProps } from "../types/iconProps";
 
 export function HtmlIcon(props: IconProps) {
   return (
