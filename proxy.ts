@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 const BASIC_USER = process.env.BASIC_AUTH_USER;
 const BASIC_PASSWORD = process.env.BASIC_AUTH_PASSWORD;
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const authHeader = request.headers.get("authorization");
 
   if (!BASIC_USER || !BASIC_PASSWORD) {
