@@ -101,7 +101,7 @@ export default function Home() {
                 実務案件・自主制作の詳細は、関係者向けページに掲載しています。<br />
                 閲覧には認証情報が必要です。
               </p>
-              <Link href="/works" className={`${styles.button} ${styles["button--secondary"]} ${styles["works-card__button"]}`}>
+              <Link href="/works" prefetch={false} className={`${styles.button} ${styles["button--secondary"]} ${styles["works-card__button"]}`}>
                 <span>制作実績を見る</span>
                 <span><LockIcon aria-hidden="true" className={styles.button__lock}/></span>
               </Link>
