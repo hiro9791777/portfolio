@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { BriefcaseBusinessIcon, ChevronRightIcon, CodeXmlIcon, EnvelopeIcon, HtmlIcon, JavaScriptIcon, LockIcon, PanelToLeftIcon, ReactIcon, TypeScriptIcon, WordPressIcon } from "./components/Icon";
+import { BriefcaseBusinessIcon, ChevronRightIcon, CodeXmlIcon, HtmlIcon, JavaScriptIcon, LockIcon, PanelToLeftIcon, ReactIcon, TypeScriptIcon, WordPressIcon } from "./components/Icon";
+import ContactForm from "./components/ContactForm";
 import ScrollReveal from "./components/ScrollReveal";
 import styles from "./page.module.css";
 import type { Metadata } from "next";
@@ -186,10 +187,7 @@ export default function Home() {
               <ScrollReveal className={styles.reveal}>
                 <h2 className={styles["contact-card__title"]}>お仕事のご依頼やご相談など、<br className="pc-only" />お気軽にご連絡ください。</h2>
               </ScrollReveal>
-              <a href="mailto:hyanase4@gmail.com" className={`${styles.button} ${styles["button--primary"]} ${styles["contact-card__button"]}`}>
-                <span><EnvelopeIcon aria-hidden="true" />　メールで連絡する</span>
-                <span><ChevronRightIcon className={styles.button__arrow} aria-hidden="true" /></span>
-              </a>
+              <ContactForm />
             </div>
           </div>
         </div>

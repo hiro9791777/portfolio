@@ -546,21 +546,21 @@
 
 .contact-card {
     position: relative;
-    display: grid;
-    place-items: center;
     min-height: 280px;
     padding: 48px;
     border: 1px solid rgba(105, 213, 255, 0.52);
     border-radius: 24px;
     background: rgba(0, 40, 90, 0.22);
     box-shadow: 0 0 34px rgba(0, 150, 255, 0.15);
-    text-align: center;
     overflow: hidden;
 }
 
 .contact-card__inner {
     position: relative;
     z-index: 2;
+    width: min(100%, 760px);
+    margin-inline: auto;
+    text-align: center;
 }
 
 .contact-card__title {
@@ -576,6 +576,118 @@
     margin: 34px auto 0;
     width: 360px;
     justify-content: space-between;
+}
+
+.contact-form-wrap {
+    margin-top: 34px;
+}
+
+.contact-form {
+    display: grid;
+    gap: 20px;
+    text-align: left;
+}
+
+.contact-form__field {
+    display: grid;
+    gap: 8px;
+}
+
+.contact-form__label {
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.contact-form__input {
+    width: 100%;
+    border: 1px solid rgba(105, 213, 255, 0.28);
+    border-radius: 8px;
+    background: rgba(2, 8, 23, 0.62);
+    color: #fff;
+    font: inherit;
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 14px 16px;
+    outline: none;
+    transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.contact-form__input:focus {
+    border-color: rgba(105, 213, 255, 0.82);
+    background: rgba(2, 8, 23, 0.78);
+    box-shadow: 0 0 0 3px rgba(105, 213, 255, 0.14);
+}
+
+.contact-form__input[aria-invalid="true"] {
+    border-color: rgba(255, 119, 119, 0.82);
+}
+
+.contact-form__textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+.contact-form__error {
+    color: #ffb3b3;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.contact-form__status {
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.contact-form__status--success {
+    border: 1px solid rgba(105, 213, 255, 0.42);
+    background: rgba(105, 213, 255, 0.1);
+    color: rgba(230, 249, 255, 0.94);
+}
+
+.contact-form__status--error {
+    border: 1px solid rgba(255, 119, 119, 0.36);
+    background: rgba(255, 119, 119, 0.08);
+    color: #ffd6d6;
+}
+
+.contact-form__button {
+    width: 260px;
+    margin-top: 4px;
+    justify-self: center;
+    justify-content: space-between;
+}
+
+.contact-form__button:disabled {
+    cursor: wait;
+    opacity: 0.72;
+}
+
+.contact-form__mail-link {
+    display: inline-block;
+    margin-top: 18px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 13px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.contact-form__mail-link:hover {
+    color: #69d5ff;
+}
+
+.contact-form__honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
 }
 
 .footer {
