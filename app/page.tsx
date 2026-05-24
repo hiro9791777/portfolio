@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { BriefcaseBusinessIcon, ChevronRightIcon, CodeXmlIcon, HtmlIcon, JavaScriptIcon, LockIcon, PanelToLeftIcon, ReactIcon, TypeScriptIcon, WordPressIcon } from "./components/Icon";
 import ContactForm from "./components/ContactForm";
 import ScrollReveal from "./components/ScrollReveal";
@@ -64,7 +65,7 @@ export default function Home() {
               </p>
 
               <div className={styles.hero__actions}>
-                <a href="#about" className={`${styles.button} ${styles["button--primary"]}`}>経験・スキルを見る <span><ChevronRightIcon className={styles.button__arrow} aria-hidden="true" /></span></a>
+                <a href="#skills" className={`${styles.button} ${styles["button--primary"]}`}>経験・スキルを見る <span><ChevronRightIcon className={styles.button__arrow} aria-hidden="true" /></span></a>
                 <a href="#contact" className={`${styles.button} ${styles["button--secondary"]}`}>お問い合わせ <span><ChevronRightIcon className={styles.button__arrow} aria-hidden="true" /></span></a>
               </div>
             </div>
@@ -86,6 +87,35 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.hero__name}>HIRONORI YANASE</div>
+          </div>
+        </div>
+      </section>
+
+      <section className={`section ${styles.about}`} id="about">
+        <div className="container">
+          <div className={styles["about-profile"]}>
+            <div className={styles["about-profile__image-wrap"]}>
+              <Image
+                src="/images/profile.png"
+                alt="Hironori Yanaseのプロフィール写真"
+                width={460}
+                height={460}
+                sizes="(max-width: 900px) 100vw, 420px"
+                className={styles["about-profile__image"]}
+              />
+            </div>
+
+            <div className={styles["about-profile__body"]}>
+              <div className="section-label">ABOUT</div>
+              <div className={styles["about-profile__text"]}>
+                <p>
+                  Web制作とフロントエンド開発を軸に、企業サイトやLP、イベントサイトなどの制作に携わっています。見た目を整えるだけでなく、誰に何を届けるページなのかを整理し、読みやすさや使いやすさまで含めて形にすることを大切にしています。
+                </p>
+                <p>
+                  仕事では、相手の意図を丁寧に聞き取り、必要な情報を噛み砕いて共有しながら進めるタイプです。小さな違和感も早めに確認し、安心して任せてもらえる進行と、公開後も扱いやすい実装を心がけています。
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -120,11 +150,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={`section ${styles.about}`} id="about">
+      <section className={`section ${styles["skills-section"]}`} id="skills">
         <div className="container">
           <div className={styles["about-card"]}>
             <div className={styles["about-card__body"]}>
-              <div className="section-label">ABOUT / SKILLS</div>
+              <div className="section-label">SKILLS</div>
               <ScrollReveal className={styles.reveal}>
                 <h2 className="section-title">制作と開発の視点で、<br className="pc-only"/>伝わるWebを形にします。</h2>
               </ScrollReveal>
@@ -138,40 +168,55 @@ export default function Home() {
               <div className={styles.skill}>
                 <div className={styles.skill__icon}><HtmlIcon aria-hidden="true" /></div>
                 <div>
-                  <div className={styles.skill__title}>HTML / CSS</div>
-                  <div className={styles.skill__text}>セマンティックで保守性の高いマークアップ</div>
+                  <div className={styles.skill__row}>
+                    <div className={styles.skill__title}>HTML / CSS</div>
+                    <div className={styles.skill__rating} aria-label="5段階中5">★★★★★</div>
+                  </div>
+                  <div className={styles.skill__text}>デザイン通りのWebページ制作とスマホ対応ができます</div>
                 </div>
               </div>
 
               <div className={styles.skill}>
                 <div className={styles.skill__icon}><JavaScriptIcon aria-hidden="true" /></div>
                 <div>
-                  <div className={styles.skill__title}>JavaScript</div>
-                  <div className={styles.skill__text}>UI制御やインタラクションの実装</div>
+                  <div className={styles.skill__row}>
+                    <div className={styles.skill__title}>JavaScript</div>
+                    <div className={styles.skill__rating} aria-label="5段階中4">★★★★☆</div>
+                  </div>
+                  <div className={styles.skill__text}>動きのあるUI、フォーム送信、外部データ表示ができます</div>
                 </div>
               </div>
 
               <div className={styles.skill}>
                 <div className={styles.skill__icon}><WordPressIcon aria-hidden="true" /></div>
                 <div>
-                  <div className={styles.skill__title}>WordPress</div>
-                  <div className={styles.skill__text}>オリジナルテーマ制作・更新運用</div>
+                  <div className={styles.skill__row}>
+                    <div className={styles.skill__title}>WordPress</div>
+                    <div className={styles.skill__rating} aria-label="5段階中4">★★★★☆</div>
+                  </div>
+                  <div className={styles.skill__text}>お知らせや記事を更新しやすいサイトを制作できます</div>
                 </div>
               </div>
 
               <div className={styles.skill}>
                 <div className={styles.skill__icon}><ReactIcon aria-hidden="true" /></div>
                 <div>
-                  <div className={styles.skill__title}>React / Next.js</div>
-                  <div className={styles.skill__text}>コンポーネント設計とWebアプリ制作</div>
+                  <div className={styles.skill__row}>
+                    <div className={styles.skill__title}>React / Next.js</div>
+                    <div className={styles.skill__rating} aria-label="5段階中3">★★★☆☆</div>
+                  </div>
+                  <div className={styles.skill__text}>コンポーネントを活用したWebサイト・画面制作ができます</div>
                 </div>
               </div>
 
               <div className={styles.skill}>
                 <div className={styles.skill__icon}><TypeScriptIcon aria-hidden="true" /></div>
                 <div>
-                  <div className={styles.skill__title}>TypeScript</div>
-                  <div className={styles.skill__text}>型定義を意識したコード実装</div>
+                  <div className={styles.skill__row}>
+                    <div className={styles.skill__title}>TypeScript</div>
+                    <div className={styles.skill__rating} aria-label="5段階中3">★★★☆☆</div>
+                  </div>
+                  <div className={styles.skill__text}>修正や追加がしやすいコードで実装できます</div>
                 </div>
               </div>
             </div>

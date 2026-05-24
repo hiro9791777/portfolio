@@ -34,7 +34,7 @@
 
 .header__nav {
     display: flex;
-    gap: 0 40px;
+    gap: 0 32px;
 }
 
 .header__nav a {
@@ -56,10 +56,10 @@
 
     .header__nav {
         flex-wrap: wrap;
-        gap: 0 21px;
+        gap: 0 16px;
     }
 
     .header__nav a {
-        font-size: 12px;
+        font-size: 11px;
     }
 }

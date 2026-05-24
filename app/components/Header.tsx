@@ -18,6 +18,7 @@ const Header = () => {
             <nav className={styles.header__nav} aria-label="グローバルナビゲーション">
                 <Link href="/#works">WORKS</Link>
                 <Link href="/#about">ABOUT</Link>
+                <Link href="/#skills">SKILLS</Link>
                 <Link href="/#contact">CONTACT</Link>
             </nav>
         </div>
